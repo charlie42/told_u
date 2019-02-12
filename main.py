@@ -22,15 +22,6 @@ for i in df1[' YEARMODA']:
 
 print("__WINTER__")
 
-# df_jan_rain = df2[((df2[' FRSHTT'].str.contains('.1....', regex=True)) | (df2[' FRSHTT'].str.contains('..1...', regex=True))) & (df2[' YEARMODA'] == '01')]
-# rain_mean = df_jan_rain['   TEMP'].mean()
-# print("mean temperature (F) for rainy days in january" + str(rain_mean))
-#
-# df_jan_no_rain = df2[(~df2[' FRSHTT'].str.contains('.1....', regex=True)) & (df2[' YEARMODA'] == '01')]
-# no_rain_mean = df_jan_no_rain['   TEMP'].mean()
-# print("mean temperature (F) for not rainy days in january" + str(no_rain_mean))
-#
-
 yeps = 0
 nopes = 0
 
@@ -51,8 +42,6 @@ else:
     nopes += 1
 
 for i in range(1,3):
-    #print(i)
-    #print('0(%d)' % i)
     df_jan_rain = df2[((df2[' FRSHTT'].str.contains('.1....', regex=True)) | (df2[' FRSHTT'].str.contains('..1...', regex=True))) & (df2[' YEARMODA'] == '0%d' % i)]
     rain_mean = df_jan_rain['   TEMP'].mean()
     print("mean temperature (F) for rainy days in " + str(i) + " month " + str(int(rain_mean)))
@@ -81,8 +70,6 @@ yeps = 0
 nopes = 0
 
 for i in range(3, 6):
-    # print(i)
-    # print('0(%d)' % i)
     df_jan_rain = df2[((df2[' FRSHTT'].str.contains('.1....', regex=True)) | (df2[' FRSHTT'].str.contains('..1...', regex=True))) & (df2[' YEARMODA'] == '0%d' % i)]
     rain_mean = df_jan_rain['   TEMP'].mean()
     print("mean temperature (F) for rainy days in " + str(i) + " month " + str(int(rain_mean)))
@@ -111,8 +98,6 @@ yeps = 0
 nopes = 0
 
 for i in range(6, 9):
-    # print(i)
-    # print('0(%d)' % i)
     df_jan_rain = df2[((df2[' FRSHTT'].str.contains('.1....', regex=True)) | (df2[' FRSHTT'].str.contains('..1...', regex=True))) & (df2[' YEARMODA'] == '0%d' % i)]
     rain_mean = df_jan_rain['   TEMP'].mean()
     print("mean temperature (F) for rainy days in " + str(i) + " month " + str(int(rain_mean)))
