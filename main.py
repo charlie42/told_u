@@ -1,8 +1,6 @@
 import re
 import pandas as pd
 df = pd.read_csv('CDO5012767240555.csv', dtype={' YEARMODA':str, ' FRSHTT': str})
-#print(df)
-#print(df[[TEMP]])
 print(df.columns)
 df1 = df[[' YEARMODA','   TEMP', ' FRSHTT']]
 print(df1)
